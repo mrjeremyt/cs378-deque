@@ -1,0 +1,173 @@
+        -:    0:Source:/usr/include/c++/4.7/stdexcept
+        -:    0:Graph:TestDeque.gcno
+        -:    0:Data:TestDeque.gcda
+        -:    0:Runs:4
+        -:    0:Programs:1
+        -:    1:// Standard exception classes  -*- C++ -*-
+        -:    2:
+        -:    3:// Copyright (C) 2001, 2002, 2005, 2007, 2009, 2010, 2011
+        -:    4:// Free Software Foundation, Inc.
+        -:    5://
+        -:    6:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    7:// software; you can redistribute it and/or modify it under the
+        -:    8:// terms of the GNU General Public License as published by the
+        -:    9:// Free Software Foundation; either version 3, or (at your option)
+        -:   10:// any later version.
+        -:   11:
+        -:   12:// This library is distributed in the hope that it will be useful,
+        -:   13:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   14:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   15:// GNU General Public License for more details.
+        -:   16:
+        -:   17:// Under Section 7 of GPL version 3, you are granted additional
+        -:   18:// permissions described in the GCC Runtime Library Exception, version
+        -:   19:// 3.1, as published by the Free Software Foundation.
+        -:   20:
+        -:   21:// You should have received a copy of the GNU General Public License and
+        -:   22:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   23:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   24:// <http://www.gnu.org/licenses/>.
+        -:   25:
+        -:   26:/** @file include/stdexcept
+        -:   27: *  This is a Standard C++ Library header.
+        -:   28: */
+        -:   29:
+        -:   30://
+        -:   31:// ISO C++ 19.1  Exception classes
+        -:   32://
+        -:   33:
+        -:   34:#ifndef _GLIBCXX_STDEXCEPT
+        -:   35:#define _GLIBCXX_STDEXCEPT 1
+        -:   36:
+        -:   37:#pragma GCC system_header
+        -:   38:
+        -:   39:#include <exception>
+        -:   40:#include <string>
+        -:   41:
+        -:   42:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   43:{
+        -:   44:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   45:
+        -:   46:  /**
+        -:   47:   * @addtogroup exceptions
+        -:   48:   * @{
+        -:   49:   */
+        -:   50:
+        -:   51:  /** Logic errors represent problems in the internal logic of a program;
+        -:   52:   *  in theory, these are preventable, and even detectable before the
+        -:   53:   *  program runs (e.g., violations of class invariants).
+        -:   54:   *  @brief One of two subclasses of exception.
+        -:   55:   */
+function _ZNSt11logic_errorC2ERKS_ called 24 returned 100% blocks executed 60%
+       24:   56:  class logic_error : public exception 
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 never executed
+        -:   57:  {
+        -:   58:    string _M_msg;
+        -:   59:
+        -:   60:  public:
+        -:   61:    /** Takes a character string describing the error.  */
+        -:   62:    explicit 
+        -:   63:    logic_error(const string& __arg);
+        -:   64:
+        -:   65:    virtual ~logic_error() _GLIBCXX_USE_NOEXCEPT;
+        -:   66:
+        -:   67:    /** Returns a C-style character string describing the general cause of
+        -:   68:     *  the current error (the same string passed to the ctor).  */
+        -:   69:    virtual const char* 
+        -:   70:    what() const _GLIBCXX_USE_NOEXCEPT;
+        -:   71:  };
+        -:   72:
+        -:   73:  /** Thrown by the library, or by you, to report domain errors (domain in
+        -:   74:   *  the mathematical sense).  */
+        -:   75:  class domain_error : public logic_error 
+        -:   76:  {
+        -:   77:  public:
+        -:   78:    explicit domain_error(const string& __arg);
+        -:   79:    virtual ~domain_error() _GLIBCXX_USE_NOEXCEPT;
+        -:   80:  };
+        -:   81:
+        -:   82:  /** Thrown to report invalid arguments to functions.  */
+        -:   83:  class invalid_argument : public logic_error 
+        -:   84:  {
+        -:   85:  public:
+        -:   86:    explicit invalid_argument(const string& __arg);
+        -:   87:    virtual ~invalid_argument() _GLIBCXX_USE_NOEXCEPT;
+        -:   88:  };
+        -:   89:
+        -:   90:  /** Thrown when an object is constructed that would exceed its maximum
+        -:   91:   *  permitted size (e.g., a basic_string instance).  */
+        -:   92:  class length_error : public logic_error 
+        -:   93:  {
+        -:   94:  public:
+        -:   95:    explicit length_error(const string& __arg);
+        -:   96:    virtual ~length_error() _GLIBCXX_USE_NOEXCEPT;
+        -:   97:  };
+        -:   98:
+        -:   99:  /** This represents an argument whose value is not within the expected
+        -:  100:   *  range (e.g., boundary checks in basic_string).  */
+function _ZNSt12out_of_rangeC2ERKS_ called 24 returned 100% blocks executed 100%
+       24:  101:  class out_of_range : public logic_error 
+call    0 returned 100%
+        -:  102:  {
+        -:  103:  public:
+        -:  104:    explicit out_of_range(const string& __arg);
+        -:  105:    virtual ~out_of_range() _GLIBCXX_USE_NOEXCEPT;
+        -:  106:  };
+        -:  107:
+        -:  108:  /** Runtime errors represent problems outside the scope of a program;
+        -:  109:   *  they cannot be easily predicted and can generally only be caught as
+        -:  110:   *  the program executes.
+        -:  111:   *  @brief One of two subclasses of exception.
+        -:  112:   */
+        -:  113:  class runtime_error : public exception 
+        -:  114:  {
+        -:  115:    string _M_msg;
+        -:  116:
+        -:  117:  public:
+        -:  118:    /** Takes a character string describing the error.  */
+        -:  119:    explicit 
+        -:  120:    runtime_error(const string& __arg);
+        -:  121:
+        -:  122:    virtual ~runtime_error() _GLIBCXX_USE_NOEXCEPT;
+        -:  123:
+        -:  124:    /** Returns a C-style character string describing the general cause of
+        -:  125:     *  the current error (the same string passed to the ctor).  */
+        -:  126:    virtual const char* 
+        -:  127:    what() const _GLIBCXX_USE_NOEXCEPT;
+        -:  128:  };
+        -:  129:
+        -:  130:  /** Thrown to indicate range errors in internal computations.  */
+        -:  131:  class range_error : public runtime_error 
+        -:  132:  {
+        -:  133:  public:
+        -:  134:    explicit range_error(const string& __arg);
+        -:  135:    virtual ~range_error() _GLIBCXX_USE_NOEXCEPT;
+        -:  136:  };
+        -:  137:
+        -:  138:  /** Thrown to indicate arithmetic overflow.  */
+        -:  139:  class overflow_error : public runtime_error 
+        -:  140:  {
+        -:  141:  public:
+        -:  142:    explicit overflow_error(const string& __arg);
+        -:  143:    virtual ~overflow_error() _GLIBCXX_USE_NOEXCEPT;
+        -:  144:  };
+        -:  145:
+        -:  146:  /** Thrown to indicate arithmetic underflow.  */
+        -:  147:  class underflow_error : public runtime_error 
+        -:  148:  {
+        -:  149:  public:
+        -:  150:    explicit underflow_error(const string& __arg);
+        -:  151:    virtual ~underflow_error() _GLIBCXX_USE_NOEXCEPT;
+        -:  152:  };
+        -:  153:
+        -:  154:  // @} group exceptions
+        -:  155:
+        -:  156:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  157:} // namespace
+        -:  158:
+        -:  159:#endif /* _GLIBCXX_STDEXCEPT */

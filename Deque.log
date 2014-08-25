@@ -1,0 +1,77 @@
+commit 8d640e30343f08e711730feb04fce39fdfe09bed
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 00:54:00 2014 -0500
+
+    almost final commit. closes #8 closes #9 closes #20.
+
+commit 7b0cefdf3292521ecade2a76a06efc0a4296b7a6
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 00:30:06 2014 -0500
+
+    working code. closing issues here. closes #4 closes #6 closes #7 closes #12 closes #13 closes #14 closes #15 closes #16 closes #17 closes #18.
+
+commit e84af7bf418652741b7b870a07fb0d72adea252a
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Thu Jul 24 17:03:13 2014 -0500
+
+    size constructor might not be working for string
+
+commit c15845c9245e40a4bdc2c4534102fec0ba2cafaa
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Thu Jul 24 04:56:17 2014 -0500
+
+    Did iterator, need test cases for iterator
+
+commit c934f6cfbac57322292d8225e3b8ef40c6d5eddf
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Thu Jul 24 02:28:23 2014 -0500
+
+    maybe have constructor done. fixed some tests. working on things
+
+commit 1ff0c1a00cce8e7446af2f75271a2a5b4d574e3d
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Mon Jul 21 19:52:08 2014 -0500
+
+    I hate this program
+
+commit d441a588aedd79cba4ec5f34597816fa186f7c12
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Mon Jul 21 18:48:27 2014 -0500
+
+    got map allocator done and the default constructor
+
+commit 1ff83ba706f0db23fb7f29dbfcab2660309f4373
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Mon Jul 21 12:38:30 2014 -0500
+
+    got equals
+
+commit 439c689de818b98c62f513885af0d17e9826b009
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 16 17:42:31 2014 -0500
+
+    changed up the formatting of the braces (they bother me).
+
+commit bfe33558d6dc217667f7bf7d1f928cb109dbb1de
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 16 12:39:50 2014 -0500
+
+    changed the Integer stuff to deque. Ran intial tests. closes #11
+
+commit 781fcc8f5dd8d4d639ea01cea5a531a8de70d470
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 16 12:34:08 2014 -0500
+
+     adding the skeleton files. closes #1 closes #2 closes #3 closes #5
+
+commit 9631ba9d13510d5d29a1b2fdad2b0e01e4994386
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 16 12:26:00 2014 -0500
+
+    first commit
+
+commit 98e24000815ec743f991fe71759ba30d68d0a44a
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Wed Jul 16 12:21:21 2014 -0500
+
+    Initial commit
